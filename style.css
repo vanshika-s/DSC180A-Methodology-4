@@ -1,0 +1,274 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap');
+
+/* Color palette */
+:root {
+  --beige: #F5EBDD;
+  --light-pink: #FFE9ED;
+  --blush: #FFC9D4;
+  --rose-pink: #FFA6BB;
+  --bright-pink: #FF7FA1;
+  --rose: #E4587C;
+  --berry: #B93C5F;
+  --text: #743249;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--beige);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.65;
+}
+
+/* Vintage-style typography */
+h1, h2, h3 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+}
+
+/* Header */
+.hero {
+  max-width: 1050px;
+  margin: 40px auto 25px;
+  padding: 60px 30px;
+  background: var(--blush);
+  border-radius: 28px;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  color: var(--berry);
+  margin: 10px 0;
+  line-height: 1.15;
+}
+
+.hero p {
+  margin: 8px 0;
+}
+
+.eyebrow {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--berry);
+}
+
+.pill {
+  display: inline-block;
+  background: var(--light-pink);
+  padding: 8px 22px;
+  border-radius: 30px;
+  margin-top: 15px;
+  font-size: 13px;
+  color: var(--berry);
+}
+
+/* Main content */
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 15px 20px 60px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--berry);
+  margin: 20px 0 35px;
+}
+
+/* Four reflection cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+/* Pink cards */
+.card {
+  position: relative;
+  isolation: isolate;
+  min-height: 370px;
+  padding: 50px 42px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(110, 55, 65, 0.08);
+}
+
+/* Individual pink shades */
+.card:nth-child(1) {
+  background: #FFE9ED;
+}
+
+.card:nth-child(2) {
+  background: #FFC9D4;
+}
+
+.card:nth-child(3) {
+  background: #FFA6BB;
+}
+
+.card:nth-child(4) {
+  background: #FF7FA1;
+}
+
+/* Decorative scalloped lace border */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 17px;
+  pointer-events: none;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.95) 2px,
+      transparent 2.8px
+    ) top left / 15px 15px repeat-x,
+
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.95) 2px,
+      transparent 2.8px
+    ) bottom left / 15px 15px repeat-x,
+
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.95) 2px,
+      transparent 2.8px
+    ) top left / 15px 15px repeat-y,
+
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.95) 2px,
+      transparent 2.8px
+    ) top right / 15px 15px repeat-y;
+}
+
+/* Inner delicate lace line */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border: 1.5px solid rgba(255,255,255,0.9);
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Card numbers */
+.card .number {
+  color: var(--berry);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+/* Centered question headings */
+.card h3 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  color: #862C4A;
+  font-size: 1.65rem;
+  line-height: 1.3;
+  margin: 8px auto 20px;
+  max-width: 390px;
+  text-align: center;
+}
+
+/* Answers */
+.card p {
+  font-size: 14px;
+  line-height: 1.85;
+  margin: 0 auto;
+  max-width: 390px;
+  text-align: center;
+}
+
+/* GitHub button */
+.github-link {
+  text-align: center;
+  margin: 48px 0 15px;
+}
+
+.github-button {
+  display: inline-block;
+  background: var(--berry);
+  color: white;
+  text-decoration: none;
+  padding: 13px 32px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 12px rgba(185, 60, 95, 0.18);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.github-button:hover {
+  background: var(--rose);
+  transform: translateY(-2px);
+}
+
+/* Remove unwanted footer */
+footer {
+  display: none;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .hero {
+    margin: 15px;
+    padding: 42px 22px;
+  }
+
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .container {
+    padding: 10px 16px 40px;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    min-height: 320px;
+    padding: 48px 32px;
+  }
+
+  .card h3 {
+    font-size: 1.45rem;
+  }
+
+  .card p {
+    font-size: 13.5px;
+  }
+}
