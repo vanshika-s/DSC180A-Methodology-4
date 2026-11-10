@@ -4,9 +4,9 @@
 
 **Email:** vsomani@ucsd.edu
 
-**Section:** [D29]
+**Section:** D29
 
-**Mentor:** [Stuart Geiger]
+**Mentor:** Stuart Geiger
 
 ## Capstone Reflection
 
