@@ -1,4 +1,3 @@
-
 ---
 layout: null
 ---
@@ -10,7 +9,6 @@ layout: null
   <title>DSC 180A Methodology Assignment 4</title>
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
-
 <body>
 
 <header class="hero">
